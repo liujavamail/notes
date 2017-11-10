@@ -3,7 +3,6 @@ filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'scrooloose/nerdtree'
@@ -40,6 +39,7 @@ set background=dark
 colorscheme onedark
 
 map <C-n> :NERDTreeToggle<CR>
+map <C-p> :FZF<CR>
 set rtp+=/usr/local/opt/fzf
 
 let g:deoplete#enable_at_startup = 1
