@@ -1,0 +1,55 @@
+set nocompatible
+filetype off
+
+set rtp+=~/.config/nvim/bundle/Vundle.vim
+call vundle#begin()
+"Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-scripts/ZoomWin'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'tpope/vim-endwise'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-rails'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'mileszs/ack.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'bronson/vim-trailing-whitespace'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'fatih/vim-go'
+Plugin 'vim-airline/vim-airline-themes'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+set backspace=2
+
+set number
+set relativenumber
+set tabstop=2
+set shiftwidth=2
+set shiftround
+set expandtab
+set mouse=a
+
+syntax enable
+set background=dark
+" colorscheme molokai
+ colorscheme onedark
+" colorscheme solarized
+
+map <C-n> :NERDTreeToggle<CR>
+
+map <C-p> :FZF<CR>
+
+let g:deoplete#enable_at_startup = 1
+
+set rtp+=/usr/local/opt/fzf
+
+let g:airline_theme='molokai'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+autocmd BufWritePre * %s/\s\+$//e
