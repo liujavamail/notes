@@ -1,3 +1,4 @@
+```sh
 set nocompatible
 filetype off
 
@@ -96,3 +97,5 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 "nmap <silent> <C-b> :call CocAction('jumpDefinition', 'tab drop')<CR>
+
+```
